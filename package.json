@@ -1,0 +1,38 @@
+{
+  "name": "vue-typescript-tailwind-electron",
+  "version": "1.0.0",
+  "description": "Vue3 + TypeScript + Tailwind CSS + Electron Application",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "electron:scripts": "node scripts/build-electron.js",
+    "electron:dev": "npm run electron:scripts && concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron:build": "vite build && npm run electron:scripts && electron-builder",
+    "electron:preview": "npm run build && npm run electron:scripts && electron .",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "electron",
+    "vue3",
+    "typescript",
+    "tailwindcss"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.17",
+    "concurrently": "^9.1.2",
+    "electron": "^29.1.0",
+    "electron-builder": "^24.13.1",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4",
+    "vue": "^3.4.19",
+    "vue-tsc": "^1.8.27",
+    "wait-on": "^8.0.2"
+  }
+}

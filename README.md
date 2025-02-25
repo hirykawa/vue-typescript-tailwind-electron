@@ -1,4 +1,6 @@
-# Vue 3 + TypeScript + Tailwind CSS + Electron アプリケーション
+# SoundScribe
+
+Vue 3 + TypeScript + Tailwind CSS + Electron アプリケーション
 
 ## 機能
 

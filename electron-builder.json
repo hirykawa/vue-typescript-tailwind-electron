@@ -1,0 +1,19 @@
+{
+  "appId": "com.soundscribe.app",
+  "productName": "SoundScribe",
+  "directories": {
+    "output": "build"
+  },
+  "files": ["dist/**/*", "package.json"],
+  "mac": {
+    "category": "public.app-category.music",
+    "target": ["dmg", "zip"]
+  },
+  "win": {
+    "target": ["nsis"]
+  },
+  "linux": {
+    "target": ["AppImage", "deb"],
+    "category": "Audio"
+  }
+}
